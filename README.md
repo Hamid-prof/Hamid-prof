@@ -1,21 +1,32 @@
-سلام، من حمید هستم!
+# 🤖 ربات آربیتراژ ارز دیجیتال
 
-🎓 دانشجوی علاقه‌مند به تحلیل داده و هوش مصنوعی  
-💻 در حال یادگیری Python، Pandas، Scikit-learn  
-📊 پروژه‌ها: پیش‌بینی قیمت خانه، تحلیل احساسات کاربران  
-📫 تماس با من:hamid.kanaani@gmail.com 
+ربات تمام‌خودکار برای شناسایی و اجرای فرصت‌های آربیتراژ مثلثی و بین صرافی در بازار ارز دیجیتال ایران.
 
-<!--
-**Hamid-prof/Hamid-prof** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+## 🎯 قابلیت‌ها
 
-Here are some ideas to get you started:
+- **آربیتراژ مثلثی** خودکار در نوبیتکس (BTC, ETH, USDT, XRP, BNB, ADA, DOGE, LTC)
+- **سیگنال آربیتراژ بین صرافی** (نوبیتکس ↔ والکس) با ۱۵۰+ ارز
+- محاسبه **هزینه‌های واقعی انتقال** (کارمزد برداشت + حداقل انتقال + زمان تأیید)
+- **اجرای ۲۴/۷** روی سرور ابری و موبایل
+- ارسال نوتیفیکیشن در **تلگرام**
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## 🛠️ تکنولوژی‌ها
+
+`Python` `REST API` `WebSocket` `Telegram Bot` `JSON`
+
+## 📁 ساختار پروژه
+
+| فایل | توضیح |
+|------|-------|
+| `nobitex_client.py` | ارتباط با API نوبیتکس |
+| `walex_client.py` | ارتباط با API عمومی والکس |
+| `triangular_arbitrage.py` | الگوریتم آربیتراژ مثلثی |
+| `cross_exchange_signal.py` | محاسبه سود بین صرافی |
+| `transfer_fees.json` | دیتابیس هزینه انتقال ۱۵۰+ ارز |
+| `mobile_bot.py` | اجرای اصلی ربات |
+
+## 🚀 اجرا
+
+```bash
+pip install requests python-dotenv websocket-client
+python mobile_bot.py
